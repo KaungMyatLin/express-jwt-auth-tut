@@ -4,10 +4,11 @@ do these steps to test proj
 3.  generate ACCESS_TOKEN_SECRET and REFRESH_TOKEN_SECRET
 4.  paste them in .env.
 5.  start npm run devStartAuth and npm run devStart.
-6.  open requests.rest editor and press "send request" above POST http://localhost:4000/login when y have rest client ext installed.
+6.  open requests.rest editor and press "send request" above POST localhost:4000/login when y have rest client ext installed.
 7.  this will request app.post('/login') in authServer.js editor and returns access token and refresh token.
-8.  paste access token behind Authorization: Bearer in GET http://localhost:3000/posts in server.js.
-9.  
+8.  paste access token behind Authorization: Bearer in GET localhost:3000/posts in server.js.
+9.  when access token expired in GET, use POST localhost:4000/token with refresh token from /login response.
+10. try delete refresh token.
 
 
 how to generate ACCESS_TOKEN_SECRET and REFRESH_TOKEN_SECRET?
